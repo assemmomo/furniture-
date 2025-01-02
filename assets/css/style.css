@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=New+Amsterdam&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    font-family: "ADLaM Display", "system-ui" !important;
+}
+:root{
+    --color1--:#F96E2A;
+    --color2--:#FBF8EF;
+    --color3--:#78B3CE;
+    --color4--:#C9E6F0;
+    --hovercolor--:#416575;
+}
+.orangeColor{
+    color:#F96E2A ;
+}
+.DarkWhiteColor{
+    color:#FBF8EF ;
+}
+.blueColor{
+    color:#78B3CE ;
+}
+.whiteBlueColor{
+    color:#C9E6F0 ;
+}
+.adlam-display-regular {
+    font-family: "ADLaM Display", system-ui;
+    font-weight: 100;
+    font-style: normal;
+}
+.w-75{
+    width: 75%;
+}
+.w-25{
+    width: 25%;
+}
+.h-75{
+    height: 75%;
+}
+.vh-75{
+    height: 75vh;
+}
+/*------------- nav -----------*/
+.mainPageNav{
+    /* position: fixed; */
+    background-color: var(--color2--);
+}
+.mainPageNav > div{
+    width: 33%;
+}
+.mainPageNav a:hover{
+    color: var(--hovercolor--);
+}
+.mainPageNav h1{
+    color: var(--color1--);
+    margin-left: 40px;
+}
+.navMid a{
+    color: var(--color3--);
+    margin: 0px 15px;
+}
+.navRight a{
+    margin-right: 30px;
+    color: var(--color1--);
+}
+.navActive{
+    color: var(--color1--) !important;
+}
+.loginBtn::after{
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 3px;
+    background-color: var(--color3--);
+    margin-left: 10px;
+}
+nav ul li a{
+    color: #78B3CE !important;
+}
+/*------- section1 --------*/
+.sec1Btn{
+    width: 120px;
+    height: 40px;
+    background-color: var(--color3--);
+    cursor: pointer;
+}
+.sec1Btn:hover{
+    background-color: var(--hovercolor--);
+}
+.sec1Div{
+    background-image: url(../imgs/bgg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* ------section2------- */
+
+.cardsHolder{
+    height: fit-content;
+    bottom: 150px !important;
+}
+.cardsDad{
+    /* bottom: 10%; */
+    /* margin-bottom: 10%; */
+    gap: 10%;
+}
+.cardsDad > div{
+    width: 300px;
+    height: 300px;
+    background-color: #FBF8EF;
+}
+.cardTitle{
+    color: #F96E2A;
+}
+.cardP{
+    color: #78B3CE;
+    width: 70%;
+}
+.sec2Content{
+    height: 400px;
+    /* margin-left: 50px; */
+}
+.sec2Img{
+    width: 600px;
+    margin-bottom: 400px;
+}
+.sec2Dad{
+    width: 90%;
+}
+.sec2Btn{
+    background-color: var(--color4--);
+    cursor: pointer;
+}
+.sec2Btn:hover{
+    background-color: var(--color3--);
+}
+.animate-left {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: all 1s ease;
+}
+
+.animate-right {
+    opacity: 0;
+    transform: translateX(300px);
+    transition: all 1s ease;
+}
+
+.animate-left.visible, .animate-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+.sec2Bg{
+    position: absolute;
+    width: 77%;
+    height: 700px;
+    border-radius: 200px;
+    transform: rotate(160deg);
+    right: -500px;
+    top: 200px;
+    background-color: #a84e20;
+}
+/* ------slider1------- */
+
+.slider-container {
+    width: 300vw;
+    height: 500px;
+}
+.slider {
+    transition: transform 0.5s ease-in-out;
+    width: 100% !important;
+}
+.mainSlider{
+    width: 100vw !important;
+}
+.slide {
+    height: 220px;
+    width: 400px;
+    background-color: #FBF8EF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.slide img {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sliderH{
+    color: #F96E2A;
+    margin: 10px 0 5px;
+} 
+.sliderP{
+    font-size: 18px;
+    margin-left: 10px;
+} 
+.sliderP::after{
+    content: "299.99";
+    position: absolute;
+    font-size: 12px;
+    text-decoration: line-through;
+    margin-left: 20px;
+    margin-top: 3px;
+    color: #575757c5;
+}
+.sliderBtn{
+   width: 100px;
+   height: 40px;
+   background-color: #78B3CE78;
+   cursor: pointer;
+   border-radius: 7px;
+}
+.sliderBtn:hover{
+    background-color: #78B3CE;
+}
+.btnHolder{
+    width: 100vw;
+    height: 100px;
+    bottom: -200px;
+    padding: 20px;
+}
+.leftBtn {
+    z-index: 100;
+    cursor: pointer;
+}
+.rightBtn {
+    z-index: 100;
+    cursor: pointer;
+}
+
+/*------- section3 --------*/
+
+.sec3Title{
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sec3Title::before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #78B3CE;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20%;
+    border-radius: 50%;
+}
+.sec3Title::after{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #78B3CE;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20%;
+    border-radius: 50%;
+}
+.sec3Content{
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-left: 50px;
+}
+.sec3Content>div{
+    width: 300px !important;
+    height: 300px !important;
+    background-color: #78B3CE1F;
+    margin: 10px;
+}
+.circle p{
+    width: 75%;
+}
+.circle{
+    width: 310px !important;
+    height: 310px !important;
+    background-color: #78B3CE1F !important; 
+    margin: 10px;
+}
+/*------- slider2 --------*/
+
+.comments{
+    height: 70vh;
+}
+.comments h1{
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #F96E2A;
+}
+.comments h1::before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #78B3CE;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20%;
+    border-radius: 50%;
+}
+.comments h1::after{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #78B3CE;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20%;
+    border-radius: 50%;
+}
+.commentsSlider{
+    width: 80%;
+    height: 80%;
+    /* background-color: blue; */
+    transition: 0.5s;
+}
+.cSlide{
+    width: 425px;
+    height: 225px;
+    background-color: #FBF8EF;
+    transition: transform 0.5s ease-in-out;
+}
+.cBtnHolder div{
+    cursor: pointer;
+}
+.commentsActive{
+    width: 550px;
+}
+/*------- section4 --------*/
+.contactForm input{
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: #78B3CE1F;
+}
+.contactForm input::placeholder{
+    color: #78B3CE;
+}
+.submitBtn{
+    width: 50% !important;
+    background-color: var(--color1--) !important;
+    color: white;
+}
+.massageIp{
+    height: 150px !important;
+    padding-bottom: 120px !important;
+}
+.sec4Title{
+    top: -100px !important;
+}
+.sec4Img{
+    width: 500px;
+    margin: 10px;
+}
+.sec4Img img{
+    width: 100%;
+}
+
+
+footer{
+    background-color: var(--color2--);
+}
+/*------- classes --------*/
+
+.vh-50{
+    height: 50vh;
+}
+
+@media (max-width: 1100px) {
+    .sec3imgHolder{
+        display: none !important;
+    }
+    .sec3{
+        justify-content: center !important;
+    }
+}
+@media (max-width: 1000px) {
+    .slide{
+        width: 300px;
+        height: 200px;
+    }
+}
+@media (min-width: 1000px) {
+    .sec2Img{
+        width: 600px !important;
+    }
+}
+@media (min-width: 768px) {
+    .sec2Img{
+        width: 450px;
+    }
+}
+@media (max-width: 768px) {
+    .cardsDad > div{
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .sec3Content>div{
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .circle p{
+        font-size: 12px !important;
+    }
+}
+@media (max-width: 560px) {
+    .sec2Img{
+        display: none !important;
+    }
+    .sec2Dad{
+        justify-content: center !important;
+    }
+    .sec2Content{
+        align-items: center !important;
+        justify-content: center !important;
+        margin-left: 120px !important;
+        text-align: center !important;
+    }
+}
+@media (min-width: 306px) {
+    .sec2Img{
+        width: 350px;
+        margin-top: 250px;
+    }
+    .sec2ImgHolder{
+        margin-left: 100px;
+    }
+}
+@media (max-width: 610px) {
+    .sec3Content>div{
+        width: 200px !important;
+        height: 200px !important;
+    }
+    .cSlide{
+        width: 350px !important;
+    }
+    .comments h1{
+        font-size: 16px !important;
+    }
+}
+@media (max-width: 1200px) {
+    .responsive-img {
+        display: none;
+    }
+}
+@media (max-width: 535px) {
+    .makers{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}

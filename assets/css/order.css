@@ -1,0 +1,156 @@
+.orderNav {
+    height: 50px;
+}
+
+.orderNav>div {
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
+
+.orderNavActive {
+    color: #78B3CEAD !important;
+    border-bottom: 2px solid #78B3CEAD !important;
+}
+
+.nextBtn {
+    background-color: #78B3CEAD !important;
+    color: #F96E2A !important;
+    opacity: 0.5;
+}
+
+.PreviousBtn {
+    background-color: #78B3CEAD !important;
+    color: #F96E2A !important;
+    opacity: 0.5;
+}
+
+.ordersHolder {
+    border-bottom: 2px solid black;
+    overflow-y: scroll;
+}
+
+.ordersHolder::-webkit-scrollbar-thumb {
+    background-color: #78B3CEAD;
+    border-radius: 10px;
+}
+
+.ordersHolder::-webkit-scrollbar {
+    width: 5px;
+}
+
+.order {
+    width: 100%;
+    height: 30% !important;
+    display: flex;
+    align-items: center;
+}
+
+.order>div {
+    width: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order>div>i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.order>div>i:hover {
+    color: #F96E2A;
+}
+
+.order>div>img {
+    width: 100px;
+}
+
+.order>div>h2 {
+    font-size: 20px;
+}
+
+.order>div>input {
+    height: 40px;
+    width: 150px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.order>div>input::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button !important;
+    opacity: 1;
+    height: 30px;
+}
+
+.orderTotal {
+    width: 100px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.orderNone2 {
+    width: 150px;
+    height: 40px;
+    background-color: #78B3CEAD;
+    border-radius: 10px;
+}
+
+.orderNone2>button>a {
+    color: #F96E2A;
+}
+
+.totalPrice {
+    height: 100px;
+    width: 75%;
+    bottom: -50px;
+}
+
+.shippingIps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.shippingIps>input {
+    width: 400px;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: #78b3ce31;
+    border-radius: 8px;
+}
+
+input::placeholder {
+    color: #F96E2A;
+}
+
+.orderPageAcitve {
+    display: flex !important;
+}
+
+.shippingActive {
+    background-color: #F96E2A !important;
+    color: white !important;
+}
+
+.payType {
+    width: 100px;
+    height: 50px;
+    background-color: #DFDEDE8C;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F96E2A;
+}
+
+.payActive {
+    border: 2px solid #F96E2A;
+    background-color: #78B3CE1F !important;
+}
