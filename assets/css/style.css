@@ -8,7 +8,7 @@
 }
 :root{
     --color1--:#F96E2A;
-    --color2--:#FBF8EF;
+    --color2--:#fdf8e9;
     --color3--:#78B3CE;
     --color4--:#C9E6F0;
     --hovercolor--:#416575;
@@ -17,7 +17,7 @@
     color:#F96E2A ;
 }
 .DarkWhiteColor{
-    color:#FBF8EF ;
+    color:var(--color2--) ;
 }
 .blueColor{
     color:#78B3CE ;
@@ -43,6 +43,9 @@
     height: 75vh;
 }
 /*------------- nav -----------*/
+nav{
+    background-color: var(--color2--) !important;
+}
 .mainPageNav{
     /* position: fixed; */
     background-color: var(--color2--);
@@ -96,7 +99,6 @@ nav ul li a{
 }
 
 /* ------section2------- */
-
 .cardsHolder{
     height: fit-content;
     bottom: 150px !important;
@@ -109,7 +111,7 @@ nav ul li a{
 .cardsDad > div{
     width: 300px;
     height: 300px;
-    background-color: #FBF8EF;
+    background-color: var(--color2--);
 }
 .cardTitle{
     color: #F96E2A;
@@ -178,8 +180,9 @@ nav ul li a{
 .slide {
     height: 220px;
     width: 400px;
-    background-color: #FBF8EF;
+    background-color: var(--color2--);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
 }
 .slide img {
     margin-bottom: 10px;
@@ -324,7 +327,7 @@ nav ul li a{
 .cSlide{
     width: 425px;
     height: 225px;
-    background-color: #FBF8EF;
+    background-color: var(--color2--);
     transition: transform 0.5s ease-in-out;
 }
 .cBtnHolder div{
@@ -388,6 +391,12 @@ footer{
         width: 300px;
         height: 200px;
     }
+    .img1{
+        display: none;
+    }
+    .img2{
+        display: none;
+    }
 }
 @media (min-width: 1000px) {
     .sec2Img{
@@ -418,6 +427,7 @@ footer{
     }
     .sec2Dad{
         justify-content: center !important;
+        height: 60vh;
     }
     .sec2Content{
         align-items: center !important;
