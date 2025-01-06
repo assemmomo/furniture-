@@ -20,5 +20,31 @@ setupSlider('trendsSlider1');
 setupSlider('trendsSlider2');
 setupSlider('trendsSlider3');
 
+
+const productsBtn = document.querySelectorAll('.productBtn');
+const cartMsg = document.querySelector('.cartMsg');
+localStorage.setItem('localNum2', 0);
+
+productsBtn.forEach(product => {
+    product.addEventListener('click', () => {
+      localStorage.setItem('localNum2', parseInt(localStorage.getItem('localNum2')) + 1);
+      const productData = {
+      proName: product.parentElement.querySelector(".proName").textContent,    
+      price: product.parentElement.getAttribute('price'),
+      img:product.parentElement.querySelector("img").src,
+      };
+      localStorage.setItem(`2cart${localStorage.getItem("localNum2")}`, JSON.stringify(productData));
+      cartMsg.style.top="100px";
+      setTimeout(function(){
+          cartMsg.style.top="-300px";
+      }, 2000);
+    });
+  });
+
+
+
+
+
 window.scrollTo(0, window.scrollY);
 document.body.style.overflowX = "hidden";
+
