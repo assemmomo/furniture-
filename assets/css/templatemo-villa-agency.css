@@ -253,3 +253,16 @@ Properties Style
   background-color: #f35525;
   top: -100%;
 }
+@media (max-width:767px){
+  .proHolder{
+    margin-left: 40px;
+  }
+}
+@media (max-width:1200px){
+  .our-projects::before{
+    display: none;
+  }
+  .our-projects::after{
+    display: none;
+  }
+}
