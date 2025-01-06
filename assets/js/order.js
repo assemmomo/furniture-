@@ -41,6 +41,46 @@ window.addEventListener('load', function () {
                 })
             })
         }
+        if (localStorage.getItem(`2cart${i}`)) {
+            document.querySelector(".nextBtn").style.opacity = "1";
+            document.querySelector(".orderNone").classList.remove("d-flex");
+            document.querySelector(".orderNone").style.display = "none";
+            const cartData2 = JSON.parse(localStorage.getItem(`2cart${i}`));
+            document.querySelector(".ordersHolder").innerHTML += `<div class="order">
+            <div>
+            <i class="fa-solid fa-x delete"></i>
+            <img src="${JSON.parse(localStorage.getItem(`2cart${i}`)).img}" alt="">
+            <h2>${JSON.parse(localStorage.getItem(`2cart${i}`)).proName}</h2>
+            </div>
+            
+            <div class="justify-content-between">
+            <h3 class="fs-5 productPrice">${JSON.parse(localStorage.getItem(`2cart${i}`)).price}</h3>
+            <input class="text-center orderIp" type="number" value="1">
+            <h3 class="fs-5 orderTotal">${cartData2.price}$</h3>
+            </div>
+            </div>`
+            const orders = document.querySelectorAll('.order');
+            const deleteBtn = document.querySelectorAll('.delete');
+            const orderTotal = document.querySelectorAll('.orderTotal');
+            const orderIp = document.querySelectorAll('.orderIp');
+            const productPrice = document.querySelectorAll('.productPrice');
+
+
+            deleteBtn.forEach(function (e) {
+                e.addEventListener('click', function () {
+                    e.parentElement.parentElement.remove();
+                    localStorage.removeItem(`2cart${i}`);
+                    window.location.reload();
+                })
+            })
+
+            orderIp.forEach(function (e) {
+                e.addEventListener('input', function () {
+                    e.parentElement.querySelector(".orderTotal").innerHTML = parseInt((e.parentElement.querySelector(".productPrice").innerHTML) * (e.value)) + "$";
+                    updateTotal();
+                })
+            })
+        }
 
     }
     function updateTotal() {
@@ -71,8 +111,6 @@ setInterval(function () {
                 document.querySelector(".orderNavTwo").classList.add("orderNavActive");
                 document.querySelector(".PreviousBtn").style.opacity = "1";
                 document.querySelector(".secondOrderPage").classList.remove("d-none");
-
-
             } else if (document.querySelector(".secondOrderPage").classList.contains("orderPageAcitve")) {
                 document.querySelector(".secondOrderPage").classList.remove("orderPageAcitve");
                 document.querySelector(".secondOrderPage").classList.add("d-none");
@@ -82,6 +120,17 @@ setInterval(function () {
                 document.querySelector(".orderNavThree").classList.add("orderNavActive");
                 document.querySelector(".PreviousBtn").style.opacity = "1";
                 document.querySelector(".thirdOrderPage").classList.remove("d-none");
+            } else if (document.querySelector(".thirdOrderPage").classList.contains("orderPageAcitve")) {
+                document.querySelector(".thirdOrderPage").classList.remove("orderPageAcitve");
+                document.querySelector(".thirdOrderPage").classList.add("d-none");
+                document.querySelector(".fourthOrderPage").classList.add("orderPageAcitve");
+                document.querySelector(".orderNavOne").classList.remove("orderNavActive");
+                document.querySelector(".orderNavTwo").classList.remove("orderNavActive");
+                document.querySelector(".orderNavThree").classList.remove("orderNavActive");
+                document.querySelector(".orderNavFore").classList.add("orderNavActive");
+                document.querySelector(".PreviousBtn").style.opacity = "1";
+                document.querySelector(".fourthOrderPage").classList.remove("d-none");
+                document.querySelector(".nextBtn").style.opacity = "0.5";
             }
         }
     }
@@ -105,6 +154,16 @@ setInterval(function () {
                 document.querySelector(".orderNavTwo").classList.add("orderNavActive");
                 document.querySelector(".orderNavThree").classList.remove("orderNavActive");
                 document.querySelector(".thirdOrderPage").classList.add("d-none");
+            }else if (document.querySelector(".fourthOrderPage").classList.contains("orderPageAcitve")) {
+                document.querySelector(".thirdOrderPage").classList.add("orderPageAcitve");
+                document.querySelector(".thirdOrderPage").classList.remove("d-none");
+                document.querySelector(".fourthOrderPage").classList.remove("orderPageAcitve");
+                document.querySelector(".orderNavOne").classList.remove("orderNavActive");
+                document.querySelector(".orderNavTwo").classList.remove("orderNavActive");
+                document.querySelector(".orderNavFore").classList.remove("orderNavActive");
+                document.querySelector(".orderNavThree").classList.add("orderNavActive");
+                document.querySelector(".fourthOrderPage").classList.add("d-none");
+                document.querySelector(".nextBtn").style.opacity = "1";
             }
         }
     }
@@ -120,6 +179,8 @@ setInterval(function () {
         document.querySelector(".dBtnActive").classList.add("d-flex");
         document.querySelector(".dBtnActive").classList.remove("d-none");
     }
+    document.querySelector(".lastPrice1").innerHTML = document.querySelector(".totalNum").innerHTML;
+    document.querySelector(".lastPrice2").innerHTML = document.querySelector(".totalNum").innerHTML;
 }, 100)
 
 document.querySelector(".storeBtn").onclick = function () {
