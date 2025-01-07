@@ -163,10 +163,9 @@ Properties Style
   text-transform: capitalize;
   font-weight: 500;
   color: #f35525;
-
   padding: 12px 15px;
   border-radius: 5px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 
@@ -176,7 +175,7 @@ Properties Style
 }
 
 .properties ul.properties-filter li a:hover {
-  color: #f35525;
+  color:#78B3CE;
 }
 
 .properties ul.pagination {
@@ -233,8 +232,8 @@ Properties Style
   border-radius: 50%;
 }
 .cartMsg{
-  width: 500px;
-  height: 120px;
+  width: 400px;
+  height: 100px;
   left: 50%;
   top: -300px;
   transform: translateX(-50%);
@@ -248,21 +247,31 @@ Properties Style
 .cartMsg::after{
   content: "";
   position: absolute;
-  width: 3px;
-  height: 115px;
+  width: 5px;
+  height: 95px;
   background-color: #f35525;
   top: -100%;
+  right: 80px;
 }
-@media (max-width:767px){
-  .proHolder{
-    margin-left: 40px;
-  }
+.cartMsg::before{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 95px;
+  background-color: #f35525;
+  top: -100%;
+  left: 80px;
 }
-@media (max-width:1200px){
-  .our-projects::before{
-    display: none;
+  @media (max-width:767px){
+    .proHolder{
+      margin-left: 40px;
+    }
   }
-  .our-projects::after{
-    display: none;
+  @media (max-width:1200px){
+    .our-projects::before{
+      display: none;
+    }
+    .our-projects::after{
+      display: none;
+    }
   }
-}
