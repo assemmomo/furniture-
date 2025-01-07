@@ -87,6 +87,38 @@
 nav ul li a{
     color: #78B3CE !important;
 }
+.cartMsg{
+    width: 400px;
+    height: 100px;
+    left: 50%;
+    top: -300px;
+    transform: translateX(-50%);
+    background-color: #F2F3F5;
+    border-radius: 50px;
+    border: 2px solid #f35525;
+    z-index: 100;
+    transition: 0.5s;
+    color: #f35525;
+  }
+  .cartMsg::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 95px;
+    background-color: #f35525;
+    top: -100%;
+    right: 80px;
+  }
+  .cartMsg::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 95px;
+    background-color: #f35525;
+    top: -100%;
+    left: 80px;
+  }
+
 @media (max-width: 768px) {
     .slide {
         flex-wrap: wrap;
